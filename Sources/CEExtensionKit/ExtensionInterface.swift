@@ -9,18 +9,15 @@ import Foundation
 
 /// A protocol for extensions to conform to
 public protocol ExtensionInterface {
-
-    /// Initializes extension with API
-    /// - Parameter withAPI: the API implementation itself
-    init(withAPI api: ExtensionAPI) throws
-
 }
 
 open class ExtensionBuilder {
 
     public init() {}
 
-    open func build() -> ExtensionInterface {
+    /// Builds extension with API
+    /// - Parameter withAPI: the API implementation itself
+    open func build(withAPI api: ExtensionAPI) -> ExtensionInterface {
         fatalError("You should override ExtensionBuilder.build")
     }
 }
