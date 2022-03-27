@@ -11,6 +11,7 @@ import Foundation
 public protocol ExtensionAPI {
 
     var extensionId: String { get }
+    var workspaceURL: URL { get }
 
     /// API to work with targets
     var targets: TargetsAPI { get }
