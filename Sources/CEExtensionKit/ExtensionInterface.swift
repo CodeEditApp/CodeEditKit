@@ -11,10 +11,7 @@ import Foundation
 public protocol ExtensionInterface {
 }
 
-open class ExtensionBuilder {
-
-    public init() {}
-
+open class ExtensionBuilder: NSObject {
     /// Builds extension with API
     /// - Parameter withAPI: the API implementation itself
     open func build(withAPI api: ExtensionAPI) -> ExtensionInterface {
