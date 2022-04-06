@@ -7,7 +7,10 @@
 
 import Foundation
 
-public struct ExtensionManifest: Codable, Identifiable, Hashable {
-    public var id: String
+public struct ExtensionManifest: Codable, Hashable {
+    public var name: String
     public var displayName: String
+    public var homepage: URL?
+    public var repository: URL?
+    public var issues: URL?
 }
