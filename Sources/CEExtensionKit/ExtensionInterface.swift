@@ -9,9 +9,5 @@ import Foundation
 
 /// A protocol for extensions to conform to
 public protocol ExtensionInterface {
-}
-
-public protocol ExtensionBuilderProtocol: NSObject {
-    init()
-    func build(withAPI api: ExtensionAPI) -> ExtensionInterface
+    init(extensionAPI: ExtensionAPI)
 }
