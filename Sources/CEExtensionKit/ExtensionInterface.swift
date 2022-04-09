@@ -11,14 +11,7 @@ import Foundation
 public protocol ExtensionInterface {
 }
 
-open class ExtensionBuilder: NSObject {
-    required public override init() {
-        super.init()
-    }
-
-    /// Builds extension with API
-    /// - Parameter withAPI: the API implementation itself
-    open func build(withAPI api: ExtensionAPI) -> ExtensionInterface {
-        fatalError("You should override ExtensionBuilder.build")
-    }
+public protocol ExtensionBuilderProtocol: NSObject {
+    init()
+    func build(withAPI api: ExtensionAPI) -> ExtensionInterface
 }
