@@ -1,3 +1,4 @@
-# CEExtensionKit
+# CodeEditKit
 
-A description of this package.
+CodeEditKit is a dynamic library which is shared between CodeEdit and extensions.
+It allows them to understand one another.
