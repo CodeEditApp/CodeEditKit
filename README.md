@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/806104/193744059-55de612d-a672-4c15-be50-e32687a6754e.png" height="128">
+  <img src="https://user-images.githubusercontent.com/806104/193877051-c60d255d-0b6a-408c-bb21-6fabc5e0e60c.png" height="128">
   <h1 align="center">CodeEditKit</h1>
 </p>
 
