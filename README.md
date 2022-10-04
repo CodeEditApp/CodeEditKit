@@ -13,3 +13,26 @@
 </p>
 
  CodeEditKit is a dynamic library which is shared between CodeEdit and it's extensions. It allows them to communicate with and understand one another.
+
+## License
+
+Licensed under the [MIT license](https://github.com/CodeEditApp/CodeEdit/blob/main/LICENSE.md).
+
+## Related Repositories
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/CodeEditApp/CodeEdit">
+        <img src="https://user-images.githubusercontent.com/806104/163099605-4eaedd33-8441-4125-9ca1-a7ccb2f62a74.png" height="128">
+        <p>CodeEdit</p>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/CodeEditApp/CodeEditTextView">
+        <img src="https://user-images.githubusercontent.com/806104/175655252-d77cef62-31f5-4f40-a2ad-c1406a6dd1b9.png" height="128">
+        <p>CodeEditTextView</p>
+      </a>
+    </td>
+  </tr>
+</table>
