@@ -17,7 +17,9 @@ public struct Target: Identifiable {
      * - Parameter executable: The executable to launch inside the pseudo terminal
      * - Parameter args: an array of strings that is passed as the arguments to the underlying process
      * - Parameter environment: an array of environment variables to pass to the child process.
-     * - Parameter execName: If provided, this is used as the Unix argv[0] parameter, otherwise, the executable is used as the args [0], this is used when the intent is to set a different process name than the file that backs it.
+     * - Parameter execName: If provided, this is used as the Unix argv[0] parameter, otherwise,
+     * the executable is used as the args [0], this is used when the intent is to set a different process name
+     * than the file that backs it.
      */
     public init(id: String, displayName: String,
                 executable: String, args: [String] = [],
@@ -45,6 +47,8 @@ public struct Target: Identifiable {
     /// ``environment`` is an array of environment variables to pass to the child process.
     public var environment: [String]?
 
-    /// ``execName`` If provided, this is used as the Unix argv[0] parameter, otherwise, the executable is used as the args [0], this is used when the intent is to set a different process name than the file that backs it.
+    /// ``execName`` If provided, this is used as the Unix argv[0] parameter, otherwise,
+    /// the executable is used as the args [0], this is used when the intent is to set a different
+    /// process name than the file that backs it.
     public var execName: String?
 }
