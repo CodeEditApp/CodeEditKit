@@ -12,9 +12,9 @@
   </a>
 </p>
 
- CodeEditKit is a dynamic library which is shared between CodeEdit and it's extensions. It allows them to communicate with and understand one another.
+CodeEditKit is a dynamic library which is shared between CodeEdit and it's extensions. It allows them to communicate with and understand one another.
 
-<img width="1012" alt="github-cover-CodeEditKit" src="https://user-images.githubusercontent.com/9460130/194028678-dc985fa0-ccb9-4a6b-8d16-0185e10aed8d.png">
+<img width="1012" alt="CodeEditKit Flow" src="https://user-images.githubusercontent.com/806104/194965299-6aaa27b3-d363-42b4-a2b3-990513eed54e.png">
 
 ## Documentation
 
