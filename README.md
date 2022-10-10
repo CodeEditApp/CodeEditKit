@@ -16,6 +16,10 @@
 
 <img width="1012" alt="github-cover-CodeEditKit" src="https://user-images.githubusercontent.com/9460130/194028678-dc985fa0-ccb9-4a6b-8d16-0185e10aed8d.png">
 
+## Documentation
+
+The documentation for `CodeEditKit` can be viewed [here](https://codeeditapp.github.io/CodeEditKit/documentation/codeeditkit/).
+
 ## License
 
 Licensed under the [MIT license](https://github.com/CodeEditApp/CodeEdit/blob/main/LICENSE.md).
