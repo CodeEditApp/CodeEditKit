@@ -10,7 +10,7 @@ on:
     branches:
       - 'main'
 jobs:
-  code-edit-text-view-tests:
+  code-edit-kit-tests:
     name: Testing CodeEditKit
     runs-on: macos-12
     steps:
