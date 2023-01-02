@@ -7,8 +7,20 @@
 
 import Foundation
 import SwiftUI
+import ExtensionKit
 
-public protocol SidebarItem: View, Identifiable where ID == String {
-    var id: ID { get }
+public protocol SidebarItem: View, GenericExtension {
     var icon: String { get }
+}
+
+extension SidebarItem {
+    var scene: some AppExtensionScene {
+        PrimitiveAppExtensionScene(id: id) {
+            VStack(alignment: .leading) {
+                self
+                    .scrollContentBackground(.hidden)
+            }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+    }
 }

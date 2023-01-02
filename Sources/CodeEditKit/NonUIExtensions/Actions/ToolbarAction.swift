@@ -10,13 +10,15 @@ import Foundation
 public struct ToolbarAction: CEAction {
     public var kind: ActionKind = .toolbar
 
-    public var name: String
-    public var id: String { "toolbar\(name)"}
+    public var label: String
+    public var id: String { "toolbar\(label)"}
 
+    public var description: String
     public var action: () -> Void
 
-    public init(name: String, action: @escaping () -> Void) {
-        self.name = name
+    public init(_ label: String, description: String = "Toolbar action", action: @escaping () -> Void) {
+        self.label = label
+        self.description = description
         self.action = action
     }
 }

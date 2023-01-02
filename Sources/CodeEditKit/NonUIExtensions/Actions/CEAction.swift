@@ -7,10 +7,8 @@
 
 import Foundation
 
-public protocol CEAction: Identifiable, Nameable where ID == String {
+public protocol CEAction: GenericExtension {
 
-    var id: ID { get }
-    var name: String { get }
     var kind: ActionKind { get }
     var action: () -> Void { get }
 }

@@ -20,7 +20,7 @@ public protocol ToolbarItemExtension {
 extension ToolbarItemExtension {
     public var toolbarItemScenes: some AppExtensionScene {
         toolbaritems.map { nav in
-            PrimitiveAppExtensionScene(id: nav.mappedID) {
+            PrimitiveAppExtensionScene(id: nav.id) {
                 nav.body
             }
         }

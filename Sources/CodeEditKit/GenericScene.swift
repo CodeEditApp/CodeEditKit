@@ -2,40 +2,34 @@
 //  File.swift
 //  
 //
-//  Created by Wouter Hennen on 30/12/2022.
+//  Created by Wouter Hennen on 02/01/2023.
 //
 
-import Foundation
 import SwiftUI
 import ExtensionKit
 
+struct GenericScene<Content: View>: AppExtensionScene {
 
-struct GeneralSettingsScene<Content: View>: AppExtensionScene {
+    var sceneID: String
 
     @ViewBuilder
-    let content: () -> Content
+    var content: Content
 
-    init(content: @escaping () -> Content) {
-        self.content = content
-    }
-
-    var connection: NSXPCConnection?
     var environmentWrapper = EnvironmentPublisher()
 
     var body: some AppExtensionScene {
-        PrimitiveAppExtensionScene(id: "Settings") {
+        PrimitiveAppExtensionScene(id: sceneID) {
             GeneralSettingsView(environmentWrapper: environmentWrapper) {
-                Form {
-                    content()
-                }
-                .formStyle(.grouped)
+                content
             }
         } onConnection: { connection in
             connection.exportedInterface = .init(with: EnvironmentPublisherObjc.self)
             connection.exportedObject = environmentWrapper
+            
             connection.resume()
 
             return true
         }
     }
 }
+

@@ -9,16 +9,20 @@ import Foundation
 import SwiftUI
 
 struct DefaultNavigator: SidebarItem {
-    var id: String = "TestTest"
     var icon: String = "Test"
+
+    var label: String = "Test"
+    
+    var description: String = "Short description"
     var body: some View {
         Text("Piep")
     }
 }
 
 struct DefaultNavigator2: SidebarItem {
-    var id: String = "Hello"
     var icon: String = "Test"
+    var label: String = "Default Navigator 2"
+    var description: String = "blablabla"
     var body: some View {
         Text("Piep2")
     }

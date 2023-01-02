@@ -8,6 +8,7 @@
 import Foundation
 import SequenceBuilder
 import ExtensionKit
+import SwiftUI
 
 public protocol SidebarExtension {
 
@@ -17,17 +18,14 @@ public protocol SidebarExtension {
     var sidebars: SidebarBody { get }
 }
 
+
+
 public extension SidebarExtension {
     var sidebarScenes: some AppExtensionScene {
-
-        sidebars.map { item in
-            PrimitiveAppExtensionScene(id: item.id) {
-                item.body
-            }
-        }
+        sidebars.map(\.scene)
     }
 
     var availableExtensions: [ExtensionKind] {
-        sidebars.map { ExtensionKind.sidebarItem(sceneID: $0.id) }
+        sidebars.map { ExtensionKind.sidebarItem(sceneID: $0.id, icon: $0.icon) }
     }
 }

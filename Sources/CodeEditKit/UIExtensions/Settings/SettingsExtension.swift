@@ -18,8 +18,11 @@ public protocol SettingsExtension {
 
 public extension SettingsExtension {
     var settingsScene: some AppExtensionScene {
-        GeneralSettingsScene {
-            self.settings
+        GenericScene(sceneID: "Settings") {
+            Form {
+                self.settings
+            }
+            .formStyle(.grouped)
         }
     }
 }

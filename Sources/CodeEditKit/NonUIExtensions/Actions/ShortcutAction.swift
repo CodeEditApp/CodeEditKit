@@ -10,13 +10,16 @@ import Foundation
 public struct ShortcutAction: CEAction {
     public var kind: ActionKind = .shortcut
 
-    public var name: String
-    public var id: String { "shortcut\(name)"}
+    public var label: String
+    public var id: String { "shortcut\(label)"}
+
+    public var description: String
 
     public var action: () -> Void
 
-    public init(name: String, action: @escaping () -> Void) {
-        self.name = name
+    public init(_ label: String, description: String = "Short description", action: @escaping () -> Void) {
+        self.label = label
+        self.description = description
         self.action = action
     }
 }

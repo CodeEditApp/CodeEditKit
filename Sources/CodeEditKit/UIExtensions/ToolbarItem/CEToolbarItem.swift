@@ -8,15 +8,10 @@
 import Foundation
 import SwiftUI
 
-public protocol CEToolbarItem: View, Identifiable where ID == String {
-    var id: ID { get }
+public protocol CEToolbarItem: View, GenericExtension {
     var placement: CEToolbarItemPlacement { get }
 }
 
 extension CEToolbarItem {
-    var mappedID: String {
-        "CEToolbarItem_\(id)"
-    }
-
     public var placement: CEToolbarItemPlacement { .automatic }
 }

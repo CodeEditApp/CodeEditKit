@@ -28,16 +28,18 @@ extension ThemeExtension {
 
 public struct GeneralThemeItem: ThemeItem, Codable {
     public var id: String
-    public var name: String
+    public var label: String
+    public var description: String
     @CodableColorArray public var colors: [NSColor]
 
-    public init(id: String, name: String, colors: [NSColor]) {
+    public init(id: String, label: String, description: String = "Generic Theme", colors: [NSColor]) {
         self.id = id
-        self.name = name
+        self.label = label
+        self.description = description
         self.colors = colors
     }
 
     init(_ theme: any ThemeItem) {
-        self.init(id: theme.id, name: theme.name, colors: theme.colors)
+        self.init(id: theme.id, label: theme.label, description: theme.description, colors: theme.colors)
     }
 }
