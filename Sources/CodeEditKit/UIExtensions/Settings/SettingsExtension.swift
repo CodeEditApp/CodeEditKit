@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 import ExtensionKit
 
-protocol SettingsExtension {
+public protocol SettingsExtension {
     associatedtype SettingsBody: View
 
     @ViewBuilder
     var settings: SettingsBody { get }
 }
 
-extension SettingsExtension {
+public extension SettingsExtension {
     var settingsScene: some AppExtensionScene {
         GeneralSettingsScene {
             self.settings
