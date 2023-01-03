@@ -11,7 +11,7 @@ let package = Package(
         .library(
             name: "CodeEditKit",
             type: .dynamic,
-            targets: ["CodeEditKit", "CodeEditKitOld"]),
+            targets: ["CodeEditKit"]),
     ],
     dependencies: [
         .package(url: "https://github.com/andtie/SequenceBuilder", branch: "main"),
@@ -25,7 +25,6 @@ let package = Package(
         .target(
             name: "CodeEditKit",
             dependencies: ["SequenceBuilder", "AnyCodable", "ConcurrencyPlus"]),
-        .target(name: "CodeEditKitOld"),
         .testTarget(
             name: "CodeEditKitTests",
             dependencies: ["CodeEditKit"]),
