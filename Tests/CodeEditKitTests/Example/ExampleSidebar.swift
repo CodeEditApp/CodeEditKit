@@ -9,8 +9,9 @@ import SwiftUI
 import CodeEditKit
 
 struct ExampleSidebar: SidebarItem {
-    var id: String = "TestTest"
-    var icon: String = "Test"
+    var icon: String = "star"
+    var label: String = "Example Sidebar"
+    var description: String = "This is a description of the sidebar"
     var body: some View {
         Text("Piep")
     }

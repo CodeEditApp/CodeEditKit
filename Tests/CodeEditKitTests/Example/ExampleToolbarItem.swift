@@ -9,7 +9,10 @@ import SwiftUI
 import CodeEditKit
 
 struct ExampleToolbarItem: CEToolbarItem {
-    var id: String = "PlayItem"
+    var label: String = "Example Toolbar"
+
+    var description: String = "This is the description"
+
     var placement: ToolbarItemPlacement = .principal
     var body: some View {
         Button("Test") {

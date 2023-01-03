@@ -29,15 +29,16 @@ extension ExampleExtension: SidebarExtension {
 
 extension ExampleExtension: ActionExtension {
     var actions: [some CEAction] {
-        ShortcutAction(name: "Test") {
+
+        ShortcutAction("Test") {
             print("Blablabla")
         }
 
-        ShortcutAction(name: "Test2") {
+        ShortcutAction("Test2") {
             print("Blablabla")
         }
 
-        ToolbarAction(name: "Test") {
+        ToolbarAction("Test") {
             print("Hello")
         }
     }
@@ -56,9 +57,12 @@ extension ExampleExtension: ThemeExtension {
 }
 
 struct XcodeLightTheme: ThemeItem {
-    var id: String = "XcodeLightTheme"
-    var name: String = "Xcode Light Theme"
-    var colors: [Color] = [.blue]
+
+    var label: String = "Xcode Light Theme"
+
+    var description: String = "This is the Xcode light theme"
+    
+    var colors: [NSColor] = [.blue]
 }
 
 
