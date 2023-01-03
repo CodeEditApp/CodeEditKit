@@ -12,9 +12,6 @@ import SwiftUI
 import SequenceBuilder
 
 public protocol CodeEditExtension: AppExtension {
-    /// The shared instance of ``CodeEditExtension``.
-    /// Can be used to access shared state.
-    static var shared: Self { get }
 
     /// UI scenes of the extension.
     associatedtype Body: AppExtensionScene

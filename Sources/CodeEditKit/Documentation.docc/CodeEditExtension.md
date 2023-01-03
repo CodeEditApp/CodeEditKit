@@ -47,7 +47,6 @@ struct SettingsView: View {
 >       @EnvironmentObject var main: ExampleExtension
 >   }
 > ```
-> Non-UI extensions can make use of the ``shared-7xv27`` property of ``CodeEditExtension`` to access the shared state.
 
 
 
