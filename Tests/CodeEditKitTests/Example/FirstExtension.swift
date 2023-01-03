@@ -9,15 +9,23 @@ import SwiftUI
 import ExtensionKit
 import CodeEditKit
 
-//@main
-struct ExampleExtension: CodeEditExtension {
-    var description: String = "test"
+@main
+final class ExampleExtension: CodeEditExtension {
+    var description: String = "This is an example extension"
 
     var entitlements: [Entitlement] = [.currentfile]
+}
 
-    var body: some AppExtensionScene {
-        sidebarScenes
-        toolbarItemScenes
+extension ExampleExtension: SettingsExtension {
+    var settings: some View {
+        SettingsView()
+    }
+}
+
+struct SettingsView: View {
+    @State var enabled = false
+    var body: some View {
+        Toggle("Enabled", isOn: $enabled)
     }
 }
 
@@ -29,7 +37,7 @@ extension ExampleExtension: SidebarExtension {
 
 extension ExampleExtension: ActionExtension {
     var actions: [some CEAction] {
-
+        
         ShortcutAction("Test") {
             print("Blablabla")
         }

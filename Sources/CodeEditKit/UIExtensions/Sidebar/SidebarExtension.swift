@@ -10,7 +10,7 @@ import SequenceBuilder
 import ExtensionKit
 import SwiftUI
 
-public protocol SidebarExtension {
+public protocol SidebarExtension: ObservableObject {
 
     associatedtype SidebarBody: Sequence where SidebarBody.Element: SidebarItem
 
@@ -22,7 +22,7 @@ public protocol SidebarExtension {
 
 public extension SidebarExtension {
     var sidebarScenes: some AppExtensionScene {
-        sidebars.map(\.scene)
+        sidebars.map { $0.buildScene(with: self) }
     }
 
     var availableExtensions: [ExtensionKind] {

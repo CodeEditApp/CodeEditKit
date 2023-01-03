@@ -9,7 +9,7 @@ import Foundation
 import SequenceBuilder
 import ExtensionKit
 
-public protocol ToolbarItemExtension {
+public protocol ToolbarItemExtension: ObservableObject {
 
     associatedtype ToolbarItemBody: Sequence where ToolbarItemBody.Element: CEToolbarItem
 
@@ -22,6 +22,7 @@ extension ToolbarItemExtension {
         toolbaritems.map { nav in
             PrimitiveAppExtensionScene(id: nav.id) {
                 nav.body
+                    .environmentObject(self)
             }
         }
     }

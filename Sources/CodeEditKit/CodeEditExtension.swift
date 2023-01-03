@@ -9,21 +9,37 @@ import Foundation
 import ExtensionKit
 import ExtensionFoundation
 import SwiftUI
+import SequenceBuilder
 
 public protocol CodeEditExtension: AppExtension {
+    /// The shared instance of ``CodeEditExtension``.
+    /// Can be used to access shared state.
+    static var shared: Self { get }
 
+    /// UI scenes of the extension.
     associatedtype Body: AppExtensionScene
+
+    /// Extension Configuration.
     associatedtype Configuration = AppExtensionSceneConfiguration
 
+    /// A brief description of the extension. Should be max a few words.
     var description: String { get }
+
+    /// A list of Entitlements the app needs, e.g. Network Access.
     var entitlements: [Entitlement] { get }
 
-
+    /// UI scenes of the extension.
+    /// Use the default implementation.
     @AppExtensionSceneBuilder
     var body: Body { get }
 }
 
+public extension CodeEditExtension {
+    static var shared: Self { Self() }
+}
+
 extension CodeEditExtension {
+
     func gatherAvailableExtensions() -> [ExtensionKind] {
         var extensions: [ExtensionKind] = []
 
@@ -46,13 +62,16 @@ extension CodeEditExtension {
     }
 }
 
-public extension CodeEditExtension{
+public extension CodeEditExtension {
+    /// XPC Configuration for communication with CodeEdit.
+    /// Use the default implementation.
     var configuration: AppExtensionSceneConfiguration {
         AppExtensionSceneConfiguration(self.body, configuration: SettingsExtensionConfiguration(self))
     }
 }
 
-public struct SettingsExtensionConfiguration<E: CodeEditExtension>: AppExtensionConfiguration {
+
+struct SettingsExtensionConfiguration<E: CodeEditExtension>: AppExtensionConfiguration {
     public func accept(connection: NSXPCConnection) -> Bool {
         connection.exportedInterface = .init(with: XPCWrappable.self)
         connection.exportedObject = XPCWrapper(appExtension)

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import ExtensionKit
 
-public protocol SettingsExtension {
+public protocol SettingsExtension: ObservableObject {
     associatedtype SettingsBody: View
 
     @ViewBuilder
@@ -21,6 +21,7 @@ public extension SettingsExtension {
         GenericScene(sceneID: "Settings") {
             Form {
                 self.settings
+                    .environmentObject(self)
             }
             .formStyle(.grouped)
         }

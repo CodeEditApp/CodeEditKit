@@ -14,12 +14,12 @@ public protocol SidebarItem: View, GenericExtension {
 }
 
 extension SidebarItem {
-    var scene: some AppExtensionScene {
+    func buildScene<T: ObservableObject>(with envModel: T) -> some AppExtensionScene {
         PrimitiveAppExtensionScene(id: id) {
-            
             VStack(alignment: .leading) {
                 self
                     .scrollContentBackground(.hidden)
+                    .environmentObject(envModel)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
