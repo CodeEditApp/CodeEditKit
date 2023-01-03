@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "anycodable",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flight-School/AnyCodable",
+      "state" : {
+        "revision" : "862808b2070cd908cb04f9aafe7de83d35f81b05",
+        "version" : "0.6.7"
+      }
+    },
+    {
+      "identity" : "concurrencyplus",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChimeHQ/ConcurrencyPlus",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b5ba8d5ea6bfe9e43ccc44aa63f9b458057fa0f4"
+      }
+    },
+    {
+      "identity" : "sequencebuilder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/andtie/SequenceBuilder",
+      "state" : {
+        "branch" : "main",
+        "revision" : "54d3d1eff31a7e35122f616840fff11899ea85b4"
+      }
+    }
+  ],
+  "version" : 2
+}

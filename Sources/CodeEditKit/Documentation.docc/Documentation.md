@@ -4,6 +4,13 @@ CodeEditKit is a dynamic library which is shared between CodeEdit and it's exten
 
 ## Overview
 
-This is still work in progress. 
+Extensions are an essential part of CodeEdit. They can extend the languages CodeEdit supports, add custom actions and behaviors, and even provide custom views of certain data.
 
-> See [this thread](https://github.com/orgs/CodeEditApp/discussions/792) for more information.
+### Extension Types
+
+There are lots of extension types you can use to extend the functionality of CodeEdit.
+
+- <doc:Commands>
+- Sidebars
+- Test
+

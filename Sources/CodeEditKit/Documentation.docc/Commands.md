@@ -1,10 +1,10 @@
 # Commands
 
-<!--@START_MENU_TOKEN@-->Summary<!--@END_MENU_TOKEN@-->
+Quick actions
 
 ## Overview
 
-<!--@START_MENU_TOKEN@-->Text<!--@END_MENU_TOKEN@-->
+Blablabla
 
 ## Topics
 
