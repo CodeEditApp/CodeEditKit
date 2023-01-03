@@ -10,6 +10,7 @@ import AnyCodable
 import SwiftUI
 
 public struct _CEEnvironment: Codable, Equatable {
+
     public var test = false
     public var complexValue: Array<String> = []
 

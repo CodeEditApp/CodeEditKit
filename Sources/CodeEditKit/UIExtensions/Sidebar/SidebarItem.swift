@@ -16,6 +16,7 @@ public protocol SidebarItem: View, GenericExtension {
 extension SidebarItem {
     var scene: some AppExtensionScene {
         PrimitiveAppExtensionScene(id: id) {
+            
             VStack(alignment: .leading) {
                 self
                     .scrollContentBackground(.hidden)

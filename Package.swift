@@ -15,6 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/andtie/SequenceBuilder", branch: "main"),
+        .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", branch: "main"),
         .package(
             url: "https://github.com/Flight-School/AnyCodable",
             from: "0.6.0"
@@ -23,7 +24,7 @@ let package = Package(
     targets: [
         .target(
             name: "CodeEditKit",
-            dependencies: ["SequenceBuilder", "AnyCodable"]),
+            dependencies: ["SequenceBuilder", "AnyCodable", "ConcurrencyPlus"]),
         .target(name: "CodeEditKitOld"),
         .testTarget(
             name: "CodeEditKitTests",
