@@ -12,9 +12,9 @@ import SwiftUI
 
 public protocol SidebarExtension: ObservableObject {
 
-    associatedtype SidebarBody: Sequence where SidebarBody.Element: SidebarItem
+    associatedtype SidebarBody: Sidebar
 
-    @SequenceBuilder
+    @SidebarBuilder
     var sidebars: SidebarBody { get }
 }
 
@@ -22,10 +22,12 @@ public protocol SidebarExtension: ObservableObject {
 
 public extension SidebarExtension {
     var sidebarScenes: some AppExtensionScene {
-        sidebars.map { $0.buildScene(with: self) }
+        sidebars.resolve(environment: self).map(\.scene)
+//        sidebars.map { $0.buildScene(with: self) }
     }
 
     var availableExtensions: [ExtensionKind] {
-        sidebars.map { ExtensionKind.sidebarItem(sceneID: $0.id, icon: $0.icon) }
+        sidebars.resolve(environment: self).map(\.extensionKind)
+//        sidebars.map { ExtensionKind.sidebarItem(sceneID: $0.id, icon: $0.icon) }
     }
 }
