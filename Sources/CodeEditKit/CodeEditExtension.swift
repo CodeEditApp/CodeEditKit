@@ -37,6 +37,10 @@ public extension CodeEditExtension {
 
 extension CodeEditExtension {
 
+    var extensionURL: URL {
+        Bundle.main.bundleURL
+    }
+
     func gatherAvailableExtensions() -> [ExtensionKind] {
         var extensions: [ExtensionKind] = []
 
@@ -55,6 +59,7 @@ extension CodeEditExtension {
         if let self = self as? any ToolbarItemExtension {
             extensions.append(contentsOf: self.availableExtensions)
         }
+        
         return extensions
     }
 }

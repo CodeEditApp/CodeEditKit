@@ -26,7 +26,8 @@ public class EnvironmentPublisher: ObservableObject, EnvironmentPublisherObjc {
         }
     }
 
-    public func publishEnvironment(@Decoded<_CEEnvironment> data: Data) {
+    public func publishEnvironment(data: Data) {
+        @Decoded<_CEEnvironment> var data = data
         guard let $data else { return }
         environment = $data
         

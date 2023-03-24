@@ -16,6 +16,8 @@ public enum XPCError: Error {
 
 @objc
 public protocol XPCWrappable {
+    func getExtensionURL(reply: @escaping XPCReply)
+
     func getExtensionKinds(reply: @escaping XPCReply)
 
     func getTheme(reply: @escaping XPCReply)
@@ -30,6 +32,15 @@ class XPCWrapper: XPCWrappable {
 
     init(_ ext: any CodeEditExtension) {
         self.ext = ext
+    }
+
+    func getExtensionURL(reply: @escaping XPCReply) {
+        do {
+            let encoded = try JSONEncoder().encode(ext.extensionURL)
+            reply(encoded, nil)
+        } catch {
+            reply(nil, error)
+        }
     }
 
     func getExtensionKinds(reply: @escaping XPCReply) {
