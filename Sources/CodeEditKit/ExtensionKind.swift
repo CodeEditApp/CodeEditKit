@@ -8,7 +8,7 @@
 import SwiftUI
 
 public enum ExtensionKind: Codable, Hashable, CustomStringConvertible {
-    case sidebarItem(sceneID: String, icon: String)
+    case sidebarItem(sceneID: String, data: ResolvedSidebar.SidebarStore)
     case toolbarItem(sceneID: String, placement: CEToolbarItemPlacement)
     case action(actionID: String)
     case theme(themeID: String)

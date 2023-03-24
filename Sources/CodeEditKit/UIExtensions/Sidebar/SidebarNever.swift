@@ -7,3 +7,9 @@
 
 import Foundation
 
+extension Never: Sidebar {
+    @_spi(CodeEdit)
+    public func resolve(environment: some ObservableObject) -> [ResolvedSidebar] {
+        fatalError()
+    }
+}
