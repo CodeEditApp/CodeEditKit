@@ -35,7 +35,7 @@ public struct Inspector<Content: View>: Sidebar {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        let store = ResolvedSidebar.SidebarStore(kind: .inspector)
-        return [ResolvedSidebar(scene: scene, id: id, store: store)]
+        let store = ResolvedSidebar.SidebarStore(sceneID: id, kind: .inspector)
+        return [ResolvedSidebar(scene: scene, store: store)]
     }
 }

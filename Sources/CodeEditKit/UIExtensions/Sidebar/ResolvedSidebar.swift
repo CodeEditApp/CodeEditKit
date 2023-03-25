@@ -16,17 +16,16 @@ public struct ResolvedSidebar {
 
     var scene: PrimitiveAppExtensionScene
 
-    var id: String
-
     var store: SidebarStore
 
     public struct SidebarStore: Codable, Hashable {
+        public var sceneID: String
         public var icon: String?
         public var help: String?
         public var kind: Kind
     }
 
     var extensionKind: ExtensionKind {
-        .sidebarItem(sceneID: id, data: store)
+        .sidebarItem(data: store)
     }
 }

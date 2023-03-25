@@ -35,7 +35,7 @@ public struct Navigator<Content: View>: Sidebar {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        let store = ResolvedSidebar.SidebarStore(kind: .navigator)
-        return [ResolvedSidebar(scene: scene, id: id, store: store)]
+        let store = ResolvedSidebar.SidebarStore(sceneID: id, kind: .navigator)
+        return [ResolvedSidebar(scene: scene, store: store)]
     }
 }
