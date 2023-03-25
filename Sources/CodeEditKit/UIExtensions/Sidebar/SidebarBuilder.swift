@@ -11,11 +11,11 @@ import Foundation
 public struct SidebarBuilder {
     public static func buildPartialBlock(first: Never) -> Never {}
 
-    public static func buildPartialBlock<C0: Sidebar>(first: C0) -> some Sidebar {
+    public static func buildPartialBlock(first: some Sidebar) -> some Sidebar {
         first
     }
 
-    public static func buildPartialBlock<C0: Sidebar, C1: Sidebar>(accumulated: C0, next: C1) -> some Sidebar {
+    public static func buildPartialBlock(accumulated: some Sidebar, next: some Sidebar) -> some Sidebar {
         TupleSidebar(accumulated, next)
     }
 }
