@@ -64,7 +64,7 @@ extension CodeEditExtension {
     }
 }
 
-public extension CodeEditExtension {
+public extension CodeEditExtension where Self: AnyObject {
     /// XPC Configuration for communication with CodeEdit.
     /// Use the default implementation.
     var configuration: AppExtensionSceneConfiguration {
@@ -73,8 +73,12 @@ public extension CodeEditExtension {
 }
 
 
-struct SettingsExtensionConfiguration<E: CodeEditExtension>: AppExtensionConfiguration {
+struct SettingsExtensionConfiguration<E: CodeEditExtension & AnyObject>: AppExtensionConfiguration {
     public func accept(connection: NSXPCConnection) -> Bool {
+        guard let appExtension else {
+            return false
+        }
+        
         connection.exportedInterface = .init(with: XPCWrappable.self)
         connection.exportedObject = XPCWrapper(appExtension)
         connection.resume()
@@ -82,7 +86,7 @@ struct SettingsExtensionConfiguration<E: CodeEditExtension>: AppExtensionConfigu
         return true
     }
 
-    let appExtension: E
+    weak var appExtension: E?
 
     /// Creates a default configuration for the given extension.
     /// - Parameter appExtension: An instance of your custom extension that conforms to the ``TextTransformExtension`` protocol.
