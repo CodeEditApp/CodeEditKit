@@ -20,8 +20,6 @@ public protocol XPCWrappable {
 
     func getExtensionKinds(reply: @escaping XPCReply)
 
-    func getTheme(reply: @escaping XPCReply)
-
     func doAction(with identifier: String, reply: @escaping XPCReply)
 }
 
@@ -46,24 +44,6 @@ class XPCWrapper: XPCWrappable {
     func getExtensionKinds(reply: @escaping XPCReply) {
         do {
             let encoded = try JSONEncoder().encode(ext.gatherAvailableExtensions())
-            reply(encoded, nil)
-        } catch {
-            reply(nil, error)
-        }
-    }
-
-    func getTheme(reply: @escaping XPCReply) {
-        guard let ext = ext as? any ThemeExtension else {
-            reply(nil, XPCError.extensionDoesNotExist(description: String(describing: (any ThemeExtension).self)))
-            return
-        }
-        let id = "XcodeLightTheme"
-        guard let theme = ext.getTheme(with: id) else {
-            reply(nil, XPCError.identifierDoesNotExist(description: id))
-            return
-        }
-        do {
-            let encoded = try JSONEncoder().encode(theme)
             reply(encoded, nil)
         } catch {
             reply(nil, error)

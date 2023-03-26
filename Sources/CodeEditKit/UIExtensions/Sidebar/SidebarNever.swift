@@ -7,7 +7,12 @@
 
 import Foundation
 
-extension Never: Sidebar {
+extension Swift.Never: Sidebar {
+
+    public var body: Swift.Never {
+        fatalError()
+    }
+
     @_spi(CodeEdit)
     public func resolve(environment: some ObservableObject) -> [ResolvedSidebar] {
         fatalError()

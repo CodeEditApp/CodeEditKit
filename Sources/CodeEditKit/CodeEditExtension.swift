@@ -5,10 +5,9 @@
 //  Created by Wouter Hennen on 30/12/2022.
 //
 
-import Foundation
 import ExtensionKit
 import ExtensionFoundation
-import SwiftUI
+@_exported import SwiftUI
 import SequenceBuilder
 
 public protocol CodeEditExtension: AppExtension {
@@ -27,7 +26,6 @@ public protocol CodeEditExtension: AppExtension {
 
     /// UI scenes of the extension.
     /// Use the default implementation.
-    @AppExtensionSceneBuilder
     var body: Body { get }
 }
 
@@ -48,15 +46,7 @@ extension CodeEditExtension {
             extensions.append(.settings)
         }
 
-        if let self = self as? any ThemeExtension {
-            extensions.append(contentsOf: self.availableExtensions)
-        }
-        
         if let self = self as? any SidebarExtension {
-            extensions.append(contentsOf: self.availableExtensions)
-        }
-
-        if let self = self as? any ToolbarItemExtension {
             extensions.append(contentsOf: self.availableExtensions)
         }
         
