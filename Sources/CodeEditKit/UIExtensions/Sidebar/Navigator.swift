@@ -15,11 +15,8 @@ public struct Navigator<Content: View>: Sidebar {
 
     var id: String
 
-    var icon: String
-
-    public init(id: String, icon: String, content: () -> Content) {
+    public init(id: String, content: () -> Content) {
         self.id = id
-        self.icon = icon
         self.content = content()
     }
 
