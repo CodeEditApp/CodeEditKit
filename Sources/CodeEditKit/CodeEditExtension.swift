@@ -7,7 +7,6 @@
 
 import ExtensionKit
 import ExtensionFoundation
-@_exported import SwiftUI
 import SequenceBuilder
 
 public protocol CodeEditExtension: AppExtension {
@@ -27,10 +26,6 @@ public protocol CodeEditExtension: AppExtension {
     /// UI scenes of the extension.
     /// Use the default implementation.
     var body: Body { get }
-}
-
-public extension CodeEditExtension {
-    static var shared: Self { Self() }
 }
 
 extension CodeEditExtension {
