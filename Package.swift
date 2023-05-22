@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/andtie/SequenceBuilder", branch: "main"),
         .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", branch: "main"),
-        .package(url: "https://github.com/ChimeHQ/LanguageClient", exact: "0.4.0"),
+        .package(url: "https://github.com/ChimeHQ/LanguageClient", from: "0.5.0"),
         .package(url: "https://github.com/ChimeHQ/ProcessService", from: "0.2.6"),
         .package(
             url: "https://github.com/Flight-School/AnyCodable",
