@@ -14,7 +14,6 @@ let package = Package(
             targets: ["CodeEditKit"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/andtie/SequenceBuilder", branch: "main"),
         .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", branch: "main"),
         .package(url: "https://github.com/ChimeHQ/LanguageClient", from: "0.5.0"),
         .package(url: "https://github.com/ChimeHQ/ProcessService", from: "0.2.6"),
@@ -26,7 +25,7 @@ let package = Package(
     targets: [
         .target(
             name: "CodeEditKit",
-            dependencies: ["SequenceBuilder", "AnyCodable", "ConcurrencyPlus", "LanguageClient", .product(name: "ProcessServiceClient", package: "ProcessService")]),
+            dependencies: ["AnyCodable", "ConcurrencyPlus", "LanguageClient", .product(name: "ProcessServiceClient", package: "ProcessService")]),
         .testTarget(
             name: "CodeEditKitTests",
             dependencies: ["CodeEditKit"]),

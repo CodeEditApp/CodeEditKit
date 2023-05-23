@@ -7,7 +7,6 @@
 
 import ExtensionKit
 import ExtensionFoundation
-import SequenceBuilder
 
 public protocol CodeEditExtension: AppExtension {
 

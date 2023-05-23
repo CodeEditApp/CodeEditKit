@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SequenceBuilder
 import ExtensionKit
 
 struct EmptyAppExtensionScene: AppExtensionScene {
