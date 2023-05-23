@@ -16,4 +16,5 @@ export LC_CTYPE=en_US.UTF-8
 set -o pipefail && arch -"${ARCH}" xcodebuild  \
            -scheme CodeEditKit \
            -destination "platform=macos,arch=${ARCH}" \
+           -skipPackagePluginValidation \
            clean test | xcpretty
