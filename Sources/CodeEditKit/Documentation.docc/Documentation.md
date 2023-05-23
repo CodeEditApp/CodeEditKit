@@ -26,10 +26,12 @@ There are lots of extension types you can use to extend the functionality of Cod
 - <doc:Settings> (Beta)
 
 ### Getting Started
-First, have a look at ``CodeEditExtension``. This is the base protocol that will define the main structure of your extension.
+To setup your Xcode project, have a look at the <doc:CreatingProject> section.
+
+Next, have a look at ``CodeEditExtension``. This is the base protocol that will define the main structure of your extension.
 All extensions that you'll add will extend (:p) this type.
 
-Next, try adding an extension to your newly created type. A good first recommendation is the <doc:Settings> extension, as you'll likely need this later.
+Finally, try adding an extension to your newly created type. A good first recommendation is the <doc:Settings> extension, as you'll likely need this later.
 
 ### Development & Debugging
 Developing extensions with ExtensionKit has a few annoyances:
