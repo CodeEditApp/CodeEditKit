@@ -11,7 +11,7 @@ let package = Package(
         .library(
             name: "CodeEditKit",
             type: .dynamic,
-            targets: ["CodeEditKit"]),
+            targets: ["CodeEditKit"])
     ],
     dependencies: [
         .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", branch: "main"),
@@ -21,7 +21,7 @@ let package = Package(
         .package(
             url: "https://github.com/Flight-School/AnyCodable",
             from: "0.6.0"
-        ),
+        )
     ],
     targets: [
         .target(
@@ -31,6 +31,6 @@ let package = Package(
         ),
         .testTarget(
             name: "CodeEditKitTests",
-            dependencies: ["CodeEditKit"]),
+            dependencies: ["CodeEditKit"])
     ]
 )
