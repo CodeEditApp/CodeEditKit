@@ -24,7 +24,7 @@ final class UnrestrictedProcessTransport {
     private var readHandler: ReadHandler = { _ in }
     private let process: HostedProcess
     private let taskQueue = TaskQueue()
-    private var subscription: AnyCancellable? = nil
+    private var subscription: AnyCancellable?
     private let logger = Logger(subsystem: "com.chimehq.ChimeKit", category: "UnrestrictedProcessTransport")
 
     init(process: HostedProcess) {
@@ -72,12 +72,12 @@ extension UnrestrictedProcessTransport: DataTransport {
 /// Provides an interface to a LSP language server hosted by an intermediary process.
 public class RemoteLanguageServer {
     private let wrappedServer: JSONRPCLanguageServer
-    private var subscription: AnyCancellable? = nil
+    private var subscription: AnyCancellable?
     private let logger = Logger(subsystem: "com.chimehq.ChimeKit", category: "RemoteLanguageServer")
 
     private let process: HostedProcess
     private let taskQueue = TaskQueue()
-    public var terminationHandler: (() -> Void)? = nil
+    public var terminationHandler: (() -> Void)?
 
     init(named serviceName: String, parameters: Process.ExecutionParameters) throws {
         self.process = HostedProcess(named: serviceName, parameters: parameters)

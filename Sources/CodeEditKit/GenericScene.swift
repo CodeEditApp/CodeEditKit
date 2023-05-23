@@ -42,4 +42,3 @@ struct GenericScene<Content: View>: AppExtensionScene {
         }
     }
 }
-

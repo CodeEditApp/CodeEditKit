@@ -30,8 +30,7 @@ public class EnvironmentPublisher: ObservableObject, EnvironmentPublisherObjc {
         @Decoded<_CEEnvironment> var data = data
         guard let $data else { return }
         environment = $data
-        
+
         print("update: received data \($data)")
     }
 }
-

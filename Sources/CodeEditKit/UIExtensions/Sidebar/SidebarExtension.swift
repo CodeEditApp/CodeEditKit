@@ -17,7 +17,6 @@ public protocol SidebarExtension: ObservableObject {
     var sidebars: SidebarBody { get }
 }
 
-
 public extension SidebarExtension {
     var sidebarScenes: some AppExtensionScene {
         sidebars.resolve(environment: self).map(\.scene)

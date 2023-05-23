@@ -27,7 +27,6 @@ public protocol XPCWrappable {
     func isDebug(reply: @escaping (Bool) -> Void)
 }
 
-
 class XPCWrapper: XPCWrappable {
 
     var ext: any CodeEditExtension

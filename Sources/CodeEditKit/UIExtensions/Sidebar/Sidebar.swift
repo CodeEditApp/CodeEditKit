@@ -16,11 +16,9 @@ public protocol Sidebar {
 
     @_spi(CodeEdit)
     func resolve(environment: some ObservableObject) -> [ResolvedSidebar]
-    
 }
 
 public extension Sidebar {
-    
     func resolve(environment: some ObservableObject) -> [ResolvedSidebar] {
         body.resolve(environment: environment)
     }

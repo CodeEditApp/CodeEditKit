@@ -12,7 +12,7 @@ import SwiftUI
 public struct _CEEnvironment: Codable, Equatable {
 
     public var test = false
-    public var complexValue: Array<String> = []
+    public var complexValue: [String] = []
 
     var otherKeys: [String: AnyCodable] = [:]
 
@@ -20,7 +20,7 @@ public struct _CEEnvironment: Codable, Equatable {
         self[keyPath: keyPath] = value
     }
 
-    public subscript<K>(key: K.Type) -> K.Value where K : CEEnvironmentKey {
+    public subscript<K>(key: K.Type) -> K.Value where K: CEEnvironmentKey {
         get {
             guard let data = otherKeys[key.identifier] else { return key.defaultValue }
             return data.value as! K.Value
@@ -30,7 +30,7 @@ public struct _CEEnvironment: Codable, Equatable {
 }
 
 @propertyWrapper
-public struct CEEnvironment<Value> : DynamicProperty {
+public struct CEEnvironment<Value>: DynamicProperty {
     @Environment(\._ceEnvironment) var environment
 
     public init(_ keyPath: KeyPath<_CEEnvironment, Value>) {

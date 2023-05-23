@@ -17,6 +17,7 @@ let package = Package(
         .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", branch: "main"),
         .package(url: "https://github.com/ChimeHQ/LanguageClient", from: "0.5.0"),
         .package(url: "https://github.com/ChimeHQ/ProcessService", from: "0.2.6"),
+        .package(url: "https://github.com/realm/SwiftLint", from: "0.52.2"),
         .package(
             url: "https://github.com/Flight-School/AnyCodable",
             from: "0.6.0"
@@ -25,7 +26,9 @@ let package = Package(
     targets: [
         .target(
             name: "CodeEditKit",
-            dependencies: ["AnyCodable", "ConcurrencyPlus", "LanguageClient", .product(name: "ProcessServiceClient", package: "ProcessService")]),
+            dependencies: ["AnyCodable", "ConcurrencyPlus", "LanguageClient", .product(name: "ProcessServiceClient", package: "ProcessService")],
+            plugins: [.plugin(name: "SwiftLintPlugin", package: "SwiftLint")]
+        ),
         .testTarget(
             name: "CodeEditKitTests",
             dependencies: ["CodeEditKit"]),

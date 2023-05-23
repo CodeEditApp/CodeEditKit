@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 import ExtensionKit
 
-
 struct GeneralSettingsScene<Content: View>: AppExtensionScene {
 
     @ViewBuilder

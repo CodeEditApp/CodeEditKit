@@ -43,7 +43,7 @@ extension CodeEditExtension {
         if let self = self as? any SidebarExtension {
             extensions.append(contentsOf: self.availableExtensions)
         }
-        
+
         return extensions
     }
 }
@@ -56,13 +56,12 @@ public extension CodeEditExtension where Self: AnyObject {
     }
 }
 
-
 struct SettingsExtensionConfiguration<E: CodeEditExtension & AnyObject>: AppExtensionConfiguration {
     public func accept(connection: NSXPCConnection) -> Bool {
         guard let appExtension else {
             return false
         }
-        
+
         connection.exportedInterface = .init(with: XPCWrappable.self)
         connection.exportedObject = XPCWrapper(appExtension)
         connection.resume()
@@ -72,12 +71,7 @@ struct SettingsExtensionConfiguration<E: CodeEditExtension & AnyObject>: AppExte
 
     weak var appExtension: E?
 
-    /// Creates a default configuration for the given extension.
-    /// - Parameter appExtension: An instance of your custom extension that conforms to the ``TextTransformExtension`` protocol.
     public init(_ appExtension: E) {
         self.appExtension = appExtension
     }
 }
-
-
-

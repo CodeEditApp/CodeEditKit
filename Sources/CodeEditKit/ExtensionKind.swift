@@ -26,5 +26,3 @@ public enum ExtensionKind: Codable, Hashable, CustomStringConvertible {
         }
     }
 }
-
-
