@@ -23,6 +23,8 @@ public protocol XPCWrappable {
     func getExtensionProcessIdentifier(reply: @escaping (Int32) -> Void)
 
     func doAction(with identifier: String, reply: @escaping XPCReply)
+
+    func isDebug(reply: @escaping (Bool) -> Void)
 }
 
 
@@ -58,5 +60,13 @@ class XPCWrapper: XPCWrappable {
 
     func doAction(with identifier: String, reply: @escaping XPCReply) {
 
+    }
+
+    func isDebug(reply: @escaping (Bool) -> Void) {
+#if DEBUG
+            reply(true)
+#else
+            reply(false)
+#endif
     }
 }

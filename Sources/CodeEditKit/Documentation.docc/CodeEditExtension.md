@@ -4,7 +4,7 @@
     @DocumentationExtension(mergeBehavior: append)
 }
 
-The mother of all extensions.
+The base extension.
 
 ## Overview
 
@@ -13,7 +13,7 @@ This protocol provides basic information about the extension, such as the ``desc
 
 This type is the entrypoint of your extension, so it should be marked with `@main`.
 
-Additional extensions can be defined by extending the struct that implements ``CodeEditExtension``.
+Additional extensions can be defined by extending the class that implements ``CodeEditExtension``.
 
 ## Example
 
