@@ -16,8 +16,8 @@ CodeEditKit is a dynamic library which is shared between CodeEdit and its extens
 
 <img width="1012" alt="codeeditkit-flow" src="https://user-images.githubusercontent.com/806104/195005341-5be28322-415b-408b-a98a-49a63367106c.png">
 
-![Github Tests](https://img.shields.io/github/workflow/status/CodeEditApp/CodeEditKit/tests/main?label=tests&style=flat-square)
-![Documentation](https://img.shields.io/github/workflow/status/CodeEditApp/CodeEditKit/build-documentation/main?label=docs&style=flat-square)
+![Github Tests](https://img.shields.io/github/actions/workflow/status/CodeEditApp/CodeEditKit/tests.yml?branch=main&label=tests&style=flat-square)
+![Documentation](https://img.shields.io/github/actions/workflow/status/CodeEditApp/CodeEditKit/build-documentation.yml?branch=main&label=docs&style=flat-square)
 ![GitHub Repo stars](https://img.shields.io/github/stars/CodeEditApp/CodeEditKit?style=flat-square)
 ![GitHub forks](https://img.shields.io/github/forks/CodeEditApp/CodeEditKit?style=flat-square)
 [![Discord Badge](https://img.shields.io/discord/951544472238444645?color=5865F2&label=Discord&logo=discord&logoColor=white&style=flat-square)](https://discord.gg/vChUXVf9Em)
@@ -37,7 +37,7 @@ Licensed under the [MIT license](https://github.com/CodeEditApp/CodeEdit/blob/ma
     <td align="center">
       <a href="https://github.com/CodeEditApp/CodeEdit">
         <img src="https://user-images.githubusercontent.com/806104/163099605-4eaedd33-8441-4125-9ca1-a7ccb2f62a74.png" height="128">
-        <p>CodeEdit</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CodeEdit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
       </a>
     </td>
     <td align="center">
@@ -55,7 +55,7 @@ Licensed under the [MIT license](https://github.com/CodeEditApp/CodeEdit/blob/ma
     <td align="center">
       <a href="https://github.com/CodeEditApp/CodeEditCLI">
         <img src="https://user-images.githubusercontent.com/806104/205848006-f2654778-21f1-4f97-b292-32849cc1eff6.png" height="128">
-        <p>CodeEdit CLI</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;CodeEdit&nbsp;CLI&nbsp;&nbsp;&nbsp;&nbsp;</p>
       </a>
     </td>
   </tr>
