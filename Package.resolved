@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ChimeHQ/ConcurrencyPlus",
       "state" : {
-        "branch" : "main",
-        "revision" : "8dc56499412a373d617d50d059116bccf44b9874"
+        "revision" : "b5ba8d5ea6bfe9e43ccc44aa63f9b458057fa0f4",
+        "version" : "0.4.1"
       }
     },
     {

@@ -14,7 +14,7 @@ let package = Package(
             targets: ["CodeEditKit"])
     ],
     dependencies: [
-        .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", branch: "main"),
+        .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", from: "0.4.1"),
         .package(url: "https://github.com/ChimeHQ/LanguageClient", from: "0.5.0"),
         .package(url: "https://github.com/ChimeHQ/ProcessService", from: "0.2.6"),
         .package(
