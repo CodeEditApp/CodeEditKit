@@ -19,24 +19,6 @@
       }
     },
     {
-      "identity" : "processenv",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ChimeHQ/ProcessEnv",
-      "state" : {
-        "revision" : "29487b6581bb785c372c611c943541ef4309d051",
-        "version" : "0.3.1"
-      }
-    },
-    {
-      "identity" : "processservice",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ChimeHQ/ProcessService",
-      "state" : {
-        "revision" : "369fb0379983d3b43c7d7ad62c4e91ee020e347c",
-        "version" : "0.2.6"
-      }
-    },
-    {
       "identity" : "swiftlintplugin",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lukepistrol/SwiftLintPlugin",

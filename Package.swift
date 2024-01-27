@@ -15,7 +15,6 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", from: "0.4.1"),
-        .package(url: "https://github.com/ChimeHQ/ProcessService", from: "0.2.6"),
         .package(
             url: "https://github.com/lukepistrol/SwiftLintPlugin",
             from: "0.2.2"
@@ -28,7 +27,7 @@ let package = Package(
     targets: [
         .target(
             name: "CodeEditKit",
-            dependencies: ["AnyCodable", "ConcurrencyPlus", .product(name: "ProcessServiceClient", package: "ProcessService")],
+            dependencies: ["AnyCodable", "ConcurrencyPlus"],
             plugins: [.plugin(name: "SwiftLint", package: "SwiftLintPlugin")]
         ),
         .testTarget(
