@@ -14,53 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/ChimeHQ/ConcurrencyPlus",
       "state" : {
-        "revision" : "b5ba8d5ea6bfe9e43ccc44aa63f9b458057fa0f4",
-        "version" : "0.4.1"
-      }
-    },
-    {
-      "identity" : "fseventswrapper",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Frizlab/FSEventsWrapper",
-      "state" : {
-        "revision" : "e0c59a2ce2775e5f6642da6d19207445f10112d0",
-        "version" : "1.0.2"
-      }
-    },
-    {
-      "identity" : "glob",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Bouke/Glob",
-      "state" : {
-        "revision" : "deda6e163d2ff2a8d7e138e2c3326dbd71157faf",
-        "version" : "1.0.5"
-      }
-    },
-    {
-      "identity" : "jsonrpc",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ChimeHQ/JSONRPC",
-      "state" : {
-        "revision" : "afc20d00e38674774f84edc325424a32ae3b9e01",
-        "version" : "0.7.0"
-      }
-    },
-    {
-      "identity" : "languageclient",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ChimeHQ/LanguageClient",
-      "state" : {
-        "revision" : "92beeecd0bb783da52227839ba6c55e43fc866ec",
-        "version" : "0.5.1"
-      }
-    },
-    {
-      "identity" : "languageserverprotocol",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ChimeHQ/LanguageServerProtocol",
-      "state" : {
-        "revision" : "192bcfdcf7a013da49c6fa1b95de66254ce7c614",
-        "version" : "0.9.1"
+        "revision" : "8dc56499412a373d617d50d059116bccf44b9874",
+        "version" : "0.4.2"
       }
     },
     {
@@ -86,8 +41,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/lukepistrol/SwiftLintPlugin",
       "state" : {
-        "revision" : "d3ec7fb242ebe1d8e23bf17e58a1e27d43125994",
-        "version" : "0.2.6"
+        "revision" : "ea6d3ca895b49910f790e98e4b4ca658e0fe490e",
+        "version" : "0.54.0"
       }
     }
   ],
